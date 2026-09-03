@@ -1,8 +1,8 @@
-import type { SVGProps } from "react";
+import type { ReactElement, ReactNode, SVGProps } from "react";
 
 type P = SVGProps<SVGSVGElement>;
 
-const wrap = (children: React.ReactNode) => (props: P) => (
+const wrap = (children: ReactNode) => (props: P) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -117,7 +117,7 @@ export const LockIcon = wrap(
   </>,
 );
 
-export const iconMap: Record<string, (p: P) => JSX.Element> = {
+export const iconMap: Record<string, (p: P) => ReactElement> = {
   briefcase: BriefcaseIcon,
   chart: ChartIcon,
   growth: GrowthIcon,
